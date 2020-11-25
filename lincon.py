@@ -5,8 +5,11 @@ import timeit
 
 #find a particular solution for a congruence
 def four_pnt(a, b, n):
-	d = gcdbez.gcd(a, n)
+	#reduce congruence
+	a %= n
+	b %= n
 	#step 1: let d = gcd(a, n)
+	d = gcdbez.gcd(a, n)
 	#if d doesn't divide b, no solutions
 	if b % d != 0:
 		return None, n
