@@ -23,7 +23,7 @@ def four_pnt(a, b, n):
 			return 0, n
 		#if a is +- 1, we can 'read off' a solution
 		if a == 1:
-			return b, n
+			return b % n, n
 		elif a == -1:
 			return -b % n, n
 		#step 4: find a p s.t gcd(a, b + pn) > 1
