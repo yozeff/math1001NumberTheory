@@ -48,7 +48,6 @@ def main():
 		if b == None:
 			print(f'the last congruence has no solutions')
 		elif i != 0:
-			cur_soln = (cur_soln[0] % n, cur_soln[1] % n)
 			#amend our current solution so that it satisfies the new congruence
 			cur_soln = solve(cur_soln, (b, n))
 			print(f'x = {cur_soln[0]} + {cur_soln[1]}t for any integer t')
@@ -62,9 +61,9 @@ def main():
 		end = timeit.default_timer()
 		total_time += end - start
 
-		print(f'finished in {round(total_time, 4)}s (4d.p)')
-
 		cont_flag = False if input("'quit' to quit: ") == 'quit' else True
+
+	print(f'finished in {round(total_time, 4)}s (4d.p)')
 
 if __name__ == '__main__':
 	main()
